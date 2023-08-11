@@ -1,6 +1,6 @@
 # WebaltoPositioning
 
-WebaltoPositioning is a Python package for getting positioning data from webalto.
+WebaltoPositioning is a Python package that contains a class object "Position" to get positioning data from webalto.
 
 ## Installation
 
