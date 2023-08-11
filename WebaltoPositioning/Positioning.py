@@ -87,6 +87,7 @@ class Position:
         df = pd.concat([df_old, df], ignore_index = True) 
         df = df.drop_duplicates(subset=['Date'], keep='last')
         df = df.sort_values(by=['Date'], ascending=False).fillna(0)
+        df.reset_index(drop=True)
 
         return df        
         
