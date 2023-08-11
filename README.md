@@ -4,8 +4,8 @@ WebaltoPositioning is a Python package that contains a class object "Position" t
 
 There are 3 kinds of positioning that could be obtained:
 * Fx Positions
-* Credit Positions (by sector by currencies)
-* Rates Positions (by currency by maturiy)
+* Credit Positions (by sector & by currencies)
+* Rates Positions (by maturiy & by currencies)
 
 ## Installation
 
