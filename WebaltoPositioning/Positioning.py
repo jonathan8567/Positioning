@@ -1,7 +1,7 @@
 from Positioning_Monitor import pd, requests, BeautifulSoup, timeit, dt, datetime, ThreadPoolExecutor, warnings
 
 class Position:
-    def __init__(self, ticker, updatetype = "ALL", date = dt.today(), days = 5, file_path = "P:\\Product Specialists\\Tools\\Position Monitor\\"):
+    def __init__(self, ticker, updatetype = "All", date = dt.today(), days = 5, file_path = "P:\\Product Specialists\\Tools\\Position Monitor\\"):
         self.days = days
         self.ticker = ticker
         self.updatetype = updatetype
@@ -23,7 +23,7 @@ class Position:
                 
             self.rates = self.__GetPosition(self.__read_path, self.results)
             
-        elif self.updatetype == "FX":
+        elif self.updatetype == "Fx":
             self.__read_path = self.file_path + self.ticker + "_FX.csv"
             url = "http://webalto/reporting/nodecorate/transfo.action?report=PFI_LDN_ATTRIBUTION_PERFORMANCE&date={}&scenario=portfolioAnalysis&occurrence={}&view=Currencies&format=html&expand=-2"
             self.urls = [url for i in range(days)]
@@ -43,7 +43,7 @@ class Position:
                 
             self.credit = self.__GetPosition(self.__read_path, self.results)
             
-        elif self.updatetype == "ALL":
+        elif self.updatetype == "All":
             self.__read_path = self.file_path + self.ticker + "_RatesMD.csv"
             url = "http://webalto/reporting/nodecorate/transfo.action?report=PFI_LDN_ATTRIBUTION_PERFORMANCE&date={}&scenario=portfolioAnalysis&occurrence={}&view=Rates+-+Main+&format=html&expand=-2"
             self.urls = [url for i in range(days)]
@@ -96,13 +96,13 @@ class Position:
             if positiontype == "Rates":
                 self.__save_path = self.file_path + self.ticker + "_RatesMD.csv"
                 self.rates.to_csv(self.__save_path, index=False)
-            elif positiontype == "FX":
+            elif positiontype == "Fx":
                 self.__save_path = self.file_path + self.ticker + "_FX.csv"
                 self.fx.to_csv(self.__save_path, index=False)
             elif positiontype == "Credit":
                 self.__save_path = self.file_path + self.ticker + "_Credit.csv"
                 self.credit.to_csv(self.__save_path, index=False)
-            elif positiontype == "ALL":
+            elif positiontype == "All":
                 self.__save_path = self.file_path + self.ticker + "_RatesMD.csv"
                 self.rates.to_csv(self.__save_path, index=False)
                 self.__save_path = self.file_path + self.ticker + "_FX.csv"
