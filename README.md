@@ -2,12 +2,17 @@
 
 WebaltoPositioning is a Python package that contains a class object "Position" to get positioning data from webalto.
 
+There are 3 kinds of positioning that could be obtained:
+* Fx Positions
+* Credit Positions (by sector by currencies)
+* Rates Positions (by currency by maturiy)
+
 ## Installation
 
 Open CMD prompt and us below command to the direct
 
 ```bash
-cd C:\where you have the package downloaded
+cd C:\where you have downlaod the package
 ```
 
 Then run
