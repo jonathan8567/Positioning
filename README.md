@@ -7,7 +7,7 @@ WebaltoPositioning is a Python package that contains a class object "Position" t
 Open CMD prompt and us below command to the direct
 
 ```bash
-cd C:\where you have downlaod the package
+cd C:\where you have the package downloaded
 ```
 
 Then run
