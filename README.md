@@ -19,11 +19,11 @@ python setup.py install
 
 For class Position, you need to input the belows variable:
 
-1.ticker: fund code of the portfolio you would like to update, e.g. "X2947"
-2.updatetype: default "ALL", positioning type ("Rates", "Credit", "Fx" or "All") you would like to update, 
-3.date: default "datetime.date.today()", update until which day
-4.days: default "5", download how many days of data
-5.file_path: default "P:\\Product Specialists\\Tools\\Position Monitor\\", indicates where to read and save the file
+* 1.ticker: fund code of the portfolio you would like to update, e.g. "X2947"
+* 2.updatetype: default "ALL", positioning type ("Rates", "Credit", "Fx" or "All") you would like to update, 
+* 3.date: default "datetime.date.today()", update until which day
+* 4.days: default "5", download how many days of data
+* 5.file_path: default "P:\\Product Specialists\\Tools\\Position Monitor\\", indicates where to read and save the file
 
 ```python
 from WebaltoPositioning import Positioning
