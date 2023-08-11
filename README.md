@@ -20,7 +20,7 @@ python setup.py install
 For class Position, you need to input the belows variable:
 
 1.ticker: fund code of the portfolio you would like to update, e.g. "X2947"
-2.updatetype: default "ALL", positioning type ("Rates", "Credit", "FX" or "ALL") you would like to update, 
+2.updatetype: default "ALL", positioning type ("Rates", "Credit", "Fx" or "All") you would like to update, 
 3.date: default "datetime.date.today()", update until which day
 4.days: default "5", download how many days of data
 5.file_path: default "P:\\Product Specialists\\Tools\\Position Monitor\\", indicates where to read and save the file
@@ -35,7 +35,7 @@ date_str = "2023-08-09"
 date_object = datetime.strptime(date_str, '%Y-%m-%d').date()
 
 Positioning.Position(ticker = "X2947",
-         updatetype = "ALL",
+         updatetype = "All",
          date = date_object,
          days = 5,
          file_path = "P:\\Product Specialists\\Tools\\Position Monitor\\")
@@ -67,16 +67,16 @@ print(X2947.fx)
 
 ## Export
 
-To export the data, use SavePosition. You can choose to save "Rates", "FX", "Credit" or "ALL"
+To export the data, use SavePosition. You can choose to save "Rates", "Fx", "Credit" or "All"
 
 ```python
-X2947.SavePosition("FX")
+X2947.SavePosition("Fx")
 
 X2947.SavePosition("Rates")
 
 X2947.SavePosition("Credit")
 
-X2947.SavePosition("ALL")
+X2947.SavePosition("All")
 ```
 
 ## License
