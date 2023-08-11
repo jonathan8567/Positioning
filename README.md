@@ -71,6 +71,12 @@ To export the data, use SavePosition. You can choose to save "Rates", "FX", "Cre
 
 ```python
 X2947.SavePosition("FX")
+
+X2947.SavePosition("Rates")
+
+X2947.SavePosition("Credit")
+
+X2947.SavePosition("ALL")
 ```
 
 ## License
